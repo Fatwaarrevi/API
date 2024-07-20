@@ -1,0 +1,58 @@
+@baseUrl = http://127.0.0.1/api/v1/order
+@cType = application/json
+@password = password
+
+### GET ORDER
+get {{baseUrl}}
+token: {{password}}
+
+### POST ORDER
+post {{baseUrl}}
+Authorization:  {{password}}
+Content-Type: {{cType}}
+
+{
+  "data": {
+    "attributes": {
+      "costumer_id": "2",
+      "order_detail": [
+        {
+          "product_id": "2",
+          "quantity": "9"
+         
+        }
+
+      ]
+    }
+  }
+}
+
+### PUT ORDER
+put {{baseUrl}}/8
+Authorization: {{password}}
+Content-Type: {{cType}}
+
+{
+  "data": {
+    "attributes": {
+      "costumer_id": "2",
+      "order_detail": [
+        {
+          "product_id": "1",
+          "quantity": "2"
+         
+        }
+
+      ]
+    }
+  }
+}
+
+
+### DELETE ORDER
+delete {{baseUrl}}/8
+Authorization: {{password}}
+Content-Type: {{cType}}
+
+
+
