@@ -20,7 +20,7 @@ Content-Type: {{cType}}
 
 {
     "order_id": "1",
-    "gross_amount": "190000",
+    "gross_amount": "15000",
     "first_name": "fatwa",
     "last_name": "arrevi",
     "email": "arrevi@example.com",
@@ -33,13 +33,13 @@ Authorization: {{password}}
 Content-Type: {{cType}}
 
 {
-    "order_id": "5",
-    "gross_amount": "200000",
-    "first_name": "mawan ganteng",
-    "last_name": "alwahyu",
-    "email": "john.doe@example.com",
-    "transaction_status": "okehh",
-    "phone": "081234567890"
+    "order_id": "4",
+    "gross_amount": "5000",
+    "first_name": "fatwaa",
+    "last_name": "arrevii",
+    "email": "arrrevii@example.com",
+    "transaction_status": "succes",
+    "phone": "0812652890657"
 }
 
 ### delete request payment by ID
