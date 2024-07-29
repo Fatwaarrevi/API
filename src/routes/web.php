@@ -13,7 +13,7 @@
 |
 */
 $router->get('/', function() use ($router){
-	return $router->app->upversion();
+	return $router->app->version();
 });
 
 $router->group(['prefix' => 'api/v1/user', 'middleware'=>'auth'], function() use ($router){
@@ -56,6 +56,14 @@ $router->group(['prefix' => 'api/v1/orderitems-join','middleware' => 'auth'], fu
     $router->get('/', ['uses' => 'OrderitemController@showDataJoin']);
 	$router->get('/{id}', ['uses' => 'OrderitemController@showidJoin']);
 
+});
+
+$router->group(['prefix' => 'api/v1/payment', 'middleware' => 'auth'], function() use ($router) {
+    $router->get('/', ['uses' => 'PaymentController@index']);
+    $router->post('/', ['uses' => 'PaymentController@store']);
+    $router->get('/{id}', ['uses' => 'PaymentController@show']);
+    $router->put('/{id}', ['uses' => 'PaymentController@edit']);
+    $router->delete('/{id}', ['uses' => 'PaymentController@destroy']);
 });
 //$router->group(['prefix' => 'api/v1/testing','middleware'=>'auth'], function() use ($router){
 	
